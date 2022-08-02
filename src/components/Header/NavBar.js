@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { Container } from '../common/Container';
+import HamburgerMenu from './HamburgerMenu';
 
 const Logo = styled.span`
   font-size: 3rem;
   color: white;
   font-weight: 700;
+  z-index: 100;
 `;
 
 const NavLink = styled.li`
@@ -22,22 +24,29 @@ const NavLink = styled.li`
 `;
 
 const NavLinksContainer = styled.ul`
-  display: flex;
+  display: none;
   align-items: center;
   gap: 4.125rem;
 `;
 
 const StyledNavBar = styled(Container)`
-  padding: 1.25rem 0;
+  height: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    ${NavLinksContainer} {
+      display: flex;
+    }
+  }
 `;
 
 const NavBar = () => {
   return (
     <StyledNavBar>
       <Logo>TK</Logo>
+      <HamburgerMenu />
       <NavLinksContainer>
         <NavLink>
           <a href='/'>Works</a>
