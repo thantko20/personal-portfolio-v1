@@ -3,6 +3,7 @@ import { Container, Button } from '../common';
 import { motion } from 'framer-motion';
 import SocialLinks from '../common/SocialLinks';
 import { forwardRef } from 'react';
+import ScrollDownButton from '../common/ScrollDownButton';
 
 const HeroTitle = styled.h1`
   font-size: 2.5rem;
@@ -60,6 +61,7 @@ const HeroContainer = styled(Container)`
   gap: 1.6rem;
   align-items: flex-start;
   justify-content: center;
+  position: relative;
 `;
 
 const textArray = 'Thant Ko Zaw'.split('');
@@ -151,6 +153,7 @@ const Hero = forwardRef((props, ref) => {
       </HeroTextContainer>
       <Button>My Works</Button>
       <SocialLinks />
+      <ScrollDownButton />
     </HeroContainer>
   );
 });
