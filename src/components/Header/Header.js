@@ -14,6 +14,7 @@ const StyledHeader = styled.header`
     height: 100%;
     position: absolute;
     inset: 0;
+    z-index: -1;
     background-color: transparent;
     backdrop-filter: blur(12px);
   }
