@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Container, Button } from '../common';
 import { motion } from 'framer-motion';
 import SocialLinks from '../common/SocialLinks';
+import { forwardRef } from 'react';
 
 const HeroTitle = styled.h1`
   font-size: 2.5rem;
@@ -16,6 +17,7 @@ const HeroTitle = styled.h1`
 const HeroBodyText = styled.p`
   font-size: 1.25rem;
   margin-top: 1rem;
+  letter-spacing: 2px;
 `;
 
 const HeroTextContainer = styled.div`
@@ -34,22 +36,30 @@ const HeroTextContainer = styled.div`
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     ${HeroTitle} {
-      font-size: 5rem;
+      font-size: 5.375rem;
     }
   }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    ${HeroTitle} {
+      font-size: 6rem;
+    }
+  }
+`;
+
+const StyledAnimatedTextContainer = styled(motion.span)`
+  color: ${({ theme }) => theme.colors.primary['500']};
 `;
 
 const HeroContainer = styled(Container)`
   padding-block: 1rem;
   height: calc(100vh - 6rem);
-  max-height: 52.5rem;
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
   align-items: flex-start;
   justify-content: center;
-  max-width: 51.75rem;
 `;
 
 const textArray = 'Thant Ko Zaw'.split('');
@@ -94,7 +104,7 @@ const containerVariants = {
 
 const AnimatedTextContainer = () => {
   return (
-    <motion.span variants={textContainerVariants}>
+    <StyledAnimatedTextContainer variants={textContainerVariants}>
       {textArray.map((char, idx) => {
         if (char === ' ') {
           return (
@@ -114,17 +124,18 @@ const AnimatedTextContainer = () => {
           </motion.span>
         );
       })}
-    </motion.span>
+    </StyledAnimatedTextContainer>
   );
 };
 
-const Hero = () => {
+const Hero = forwardRef((props, ref) => {
   return (
     <HeroContainer
       as={motion.div}
       variants={containerVariants}
       initial='hidden'
       animate='visible'
+      ref={ref}
     >
       <HeroTextContainer>
         <HeroTitle>
@@ -134,14 +145,14 @@ const Hero = () => {
           </div>
         </HeroTitle>
         <HeroBodyText>
-          A web developer who crafts and turns ideas into reality and scalable
-          websites.
+          A frontend developer based in Myanmar who crafts scalable and
+          maintainable websites.
         </HeroBodyText>
       </HeroTextContainer>
       <Button>My Works</Button>
       <SocialLinks />
     </HeroContainer>
   );
-};
+});
 
 export default Hero;

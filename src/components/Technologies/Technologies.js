@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import { FaCss3, FaHtml5, FaJsSquare, FaReact } from 'react-icons/fa';
 import {
   SiFirebase,
@@ -27,9 +28,9 @@ const LogosContainer = styled.div`
   }
 `;
 
-const Technologies = () => {
+const Technologies = forwardRef((props, ref) => {
   return (
-    <Section title='Technologies'>
+    <Section title='Technologies' ref={ref}>
       <LogosContainer>
         <FaHtml5 title='HTML5' />
         <FaCss3 title='CSS3' />
@@ -42,6 +43,6 @@ const Technologies = () => {
       </LogosContainer>
     </Section>
   );
-};
+});
 
 export default Technologies;

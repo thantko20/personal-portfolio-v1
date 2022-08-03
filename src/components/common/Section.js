@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Container } from './Container';
+import { forwardRef } from 'react';
 
 const SectionTitle = styled.h2`
   font-size: 2rem;
@@ -26,33 +27,30 @@ const sectionVariants = {
     transition: {
       delay: 0.2,
       duration: 0.3,
-      when: 'afterChildren',
     },
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
-      delay: 0.1,
-      when: 'beforeChildren',
+      duration: 0.6,
     },
   },
 };
 
-const Section = ({ title, children }) => {
+const Section = forwardRef(({ title, children }, ref) => {
   return (
     <StyledSection
       as={motion.section}
       variants={sectionVariants}
       initial='hidden'
       whileInView='visible'
-      viewport={{ amount: 0.2 }}
+      ref={ref}
     >
       <SectionTitle>{title}</SectionTitle>
       <SectionBody>{children}</SectionBody>
     </StyledSection>
   );
-};
+});
 
 export default Section;

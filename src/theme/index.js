@@ -19,6 +19,7 @@ const theme = {
       400: '#a3a3a3',
       500: '#737373',
       600: '#525252',
+      800: '#262626',
     },
     text: '#C2C2C2',
     white: '#ffffff',
@@ -30,7 +31,7 @@ const theme = {
   breakpoints: {
     sm: '39.9375em',
     md: '47.9375em',
-    lg: '89.9375em',
+    lg: '73.75em',
   },
 };
 

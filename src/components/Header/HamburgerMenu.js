@@ -1,5 +1,6 @@
 import styled, { css, useTheme } from 'styled-components';
 import { motion, useCycle } from 'framer-motion';
+import { useScroll } from '../../ScrollProvider';
 
 const StyledHamburgerMenuBtn = styled.button`
   background-color: transparent;
@@ -159,6 +160,12 @@ const Menu = ({ children, isOpen }) => {
 const HamburgerMenu = () => {
   // const { isOpen, toggle, close } = useDisclosure();
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const { worksRef, aboutRef, contactRef, scrollTo } = useScroll();
+
+  const navigate = (ref) => {
+    toggleOpen(0);
+    scrollTo(ref);
+  };
 
   return (
     <StyledHamburgerMenu>
@@ -166,9 +173,9 @@ const HamburgerMenu = () => {
 
       <Menu isOpen={isOpen}>
         <MenuLinksContainer variants={menuLinksContainerVariants}>
-          <MenuLink onClick={() => toggleOpen(0)}>About</MenuLink>
-          <MenuLink onClick={() => toggleOpen(0)}>Works</MenuLink>
-          <MenuLink onClick={() => toggleOpen(0)}>Contact</MenuLink>
+          <MenuLink onClick={() => navigate(worksRef)}>Works</MenuLink>
+          <MenuLink onClick={() => navigate(aboutRef)}>About</MenuLink>
+          <MenuLink onClick={() => navigate(contactRef)}>Contact</MenuLink>
         </MenuLinksContainer>
       </Menu>
     </StyledHamburgerMenu>

@@ -5,8 +5,9 @@ const StyledHeader = styled.header`
   width: 100%;
   position: sticky;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(12px);
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  z-index: 9999;
 `;
 
 const Header = () => {

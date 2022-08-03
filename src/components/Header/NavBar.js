@@ -1,4 +1,6 @@
+import { useRef } from 'react';
 import styled from 'styled-components';
+import { useScroll } from '../../ScrollProvider';
 import { Container } from '../common/Container';
 import HamburgerMenu from './HamburgerMenu';
 
@@ -9,17 +11,15 @@ const Logo = styled.span`
   z-index: 100;
 `;
 
-const NavLink = styled.li`
+const NavLink = styled.button`
   font-weight: 500;
   transition: color 0.3s ease-in-out;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  cursor: pointer;
   &:hover {
     color: ${({ theme }) => theme.colors.primary['400']};
-  }
-
-  a {
-    font: inherit;
-    text-decoration: none;
-    color: inherit;
   }
 `;
 
@@ -43,20 +43,21 @@ const StyledNavBar = styled(Container)`
 `;
 
 const NavBar = () => {
+  const { worksRef, aboutRef, contactRef, scrollTo } = useScroll();
   return (
     <StyledNavBar>
       <Logo>TK</Logo>
       <HamburgerMenu />
       <NavLinksContainer>
-        <NavLink>
-          <a href='/'>Works</a>
-        </NavLink>
-        <NavLink>
-          <a href='/'>About</a>
-        </NavLink>
-        <NavLink>
-          <a href='/'>Contact</a>
-        </NavLink>
+        <li>
+          <NavLink onClick={() => scrollTo(worksRef)}>Works</NavLink>
+        </li>
+        <li>
+          <NavLink onClick={() => scrollTo(aboutRef)}>About</NavLink>
+        </li>
+        <li>
+          <NavLink onClick={() => scrollTo(contactRef)}>Contact</NavLink>
+        </li>
       </NavLinksContainer>
     </StyledNavBar>
   );
