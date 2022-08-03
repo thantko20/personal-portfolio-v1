@@ -4,10 +4,11 @@ import Hero from './components/Hero/Hero';
 import Divider from './components/common/Divider';
 import Technologies from './components/Technologies/Technologies';
 import Works from './components/Works/Works';
+import About from './components/About/About';
 import { useScroll } from './ScrollProvider';
 
 const App = () => {
-  const { heroRef, technologiesRef, worksRef } = useScroll();
+  const { heroRef, technologiesRef, worksRef, aboutRef } = useScroll();
   return (
     <>
       <Header />
@@ -17,6 +18,8 @@ const App = () => {
         <Technologies ref={technologiesRef} />
         <Divider />
         <Works ref={worksRef} />
+        <Divider />
+        <About ref={aboutRef} />
       </main>
     </>
   );
