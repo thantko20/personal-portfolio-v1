@@ -33,7 +33,7 @@ const StyledImage = styled.img`
 
 const About = forwardRef((props, ref) => {
   return (
-    <Section title='About' ref={ref}>
+    <Section title='About Me' ref={ref}>
       <StyledContainer>
         <Paragraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolor

@@ -21,8 +21,13 @@ const StyledScrollDownButton = styled.button`
     background-color: white;
     border-radius: 9999px;
     right: 50%;
-    bottom: 10%;
+    top: 10%;
     transform: translateX(50%);
+    transition: top 0.7s ease-in-out;
+  }
+
+  &:hover::before {
+    top: 70%;
   }
 `;
 

@@ -40,6 +40,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 // my own default style
 body {
+  position: relative;
   font-size: 1rem;
   font-family: ${({ theme }) => theme.fontFamily.primary};
   background-color: ${({ theme }) => theme.colors.bodyBg};

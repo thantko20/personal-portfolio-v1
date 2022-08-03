@@ -6,6 +6,7 @@ import Technologies from './components/Technologies/Technologies';
 import Works from './components/Works/Works';
 import About from './components/About/About';
 import { useScroll } from './ScrollProvider';
+import BackToTopBtn from './components/common/BackToTopBtn';
 
 const App = () => {
   const { heroRef, technologiesRef, worksRef, aboutRef } = useScroll();
@@ -21,6 +22,7 @@ const App = () => {
         <Divider />
         <About ref={aboutRef} />
       </main>
+      <BackToTopBtn />
     </>
   );
 };

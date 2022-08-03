@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import SocialLinks from '../common/SocialLinks';
 import { forwardRef } from 'react';
 import ScrollDownButton from '../common/ScrollDownButton';
+import { useScroll } from '../../ScrollProvider';
 
 const HeroTitle = styled.h1`
   font-size: 2.5rem;
@@ -131,6 +132,7 @@ const AnimatedTextContainer = () => {
 };
 
 const Hero = forwardRef((props, ref) => {
+  const { worksRef, scrollTo } = useScroll();
   return (
     <HeroContainer
       as={motion.div}
@@ -151,7 +153,7 @@ const Hero = forwardRef((props, ref) => {
           maintainable websites.
         </HeroBodyText>
       </HeroTextContainer>
-      <Button>My Works</Button>
+      <Button onClick={() => scrollTo(worksRef)}>Explore My Works</Button>
       <SocialLinks />
       <ScrollDownButton />
     </HeroContainer>
