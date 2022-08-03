@@ -1,6 +1,5 @@
 import styled, { css, useTheme } from 'styled-components';
-import { motion } from 'framer-motion';
-import useDisclosure from '../../hooks/useDisclosure';
+import { motion, useCycle } from 'framer-motion';
 
 const StyledHamburgerMenuBtn = styled.button`
   background-color: transparent;
@@ -93,10 +92,6 @@ const HamburgerMenuBtn = ({ onClick, isOpen }) => {
 };
 
 const menuLinkVariants = {
-  initial: {
-    opacity: 0,
-    y: -50,
-  },
   open: {
     opacity: 1,
     y: 0,
@@ -147,23 +142,35 @@ const MenuLink = ({ children, onClick }) => {
   );
 };
 
+const Menu = ({ children, isOpen }) => {
+  return (
+    <StyledMenu
+      initial={{
+        clipPath: 'circle(0% at 92% 3rem)',
+      }}
+      variants={menuVariants}
+      animate={isOpen ? 'open' : 'closed'}
+    >
+      {children}
+    </StyledMenu>
+  );
+};
+
 const HamburgerMenu = () => {
-  const { isOpen, toggle, close } = useDisclosure();
+  // const { isOpen, toggle, close } = useDisclosure();
+  const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
     <StyledHamburgerMenu>
-      <HamburgerMenuBtn onClick={toggle} isOpen={isOpen} />
-      <StyledMenu
-        isOpen={isOpen}
-        variants={menuVariants}
-        animate={isOpen ? 'open' : 'closed'}
-      >
+      <HamburgerMenuBtn onClick={() => toggleOpen()} isOpen={isOpen} />
+
+      <Menu isOpen={isOpen}>
         <MenuLinksContainer variants={menuLinksContainerVariants}>
-          <MenuLink onClick={close}>About</MenuLink>
-          <MenuLink onClick={close}>Works</MenuLink>
-          <MenuLink onClick={close}>Contact</MenuLink>
+          <MenuLink onClick={() => toggleOpen(0)}>About</MenuLink>
+          <MenuLink onClick={() => toggleOpen(0)}>Works</MenuLink>
+          <MenuLink onClick={() => toggleOpen(0)}>Contact</MenuLink>
         </MenuLinksContainer>
-      </StyledMenu>
+      </Menu>
     </StyledHamburgerMenu>
   );
 };

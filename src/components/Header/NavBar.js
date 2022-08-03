@@ -4,7 +4,7 @@ import HamburgerMenu from './HamburgerMenu';
 
 const Logo = styled.span`
   font-size: 3rem;
-  color: white;
+  color: ${({ theme }) => theme.colors.white};
   font-weight: 700;
   z-index: 100;
 `;

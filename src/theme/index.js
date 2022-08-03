@@ -1,11 +1,16 @@
-import GlobaStyles from './globalStyles';
+import GlobalStyles from './globalStyles';
 
 const theme = {
   colors: {
-    bodyBg: '#19191D',
+    bodyBg: '#19191C',
     primary: {
+      50: '#EEF2FF',
+      100: '#EEF2FF',
       300: '#A5B4FC',
       400: '#818CF8',
+      500: '#6366F1',
+      600: '#4F46E5',
+      700: '#4338CA',
       900: '#272460',
     },
     neutral: {
@@ -17,15 +22,17 @@ const theme = {
     },
     text: '#C2C2C2',
     white: '#ffffff',
+    black: '#000000',
   },
   fontFamily: {
     primary: "'Poppins', sans-serif",
   },
   breakpoints: {
+    sm: '39.9375em',
     md: '47.9375em',
     lg: '89.9375em',
   },
 };
 
 export default theme;
-export { GlobaStyles };
+export { GlobalStyles };

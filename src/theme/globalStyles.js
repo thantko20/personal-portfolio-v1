@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 // Used Josh Cameau's reset https://www.joshwcomeau.com/css/custom-css-reset/
 
-const GlobaStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -10,6 +10,7 @@ const GlobaStyles = createGlobalStyle`
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 html, body {
@@ -42,9 +43,13 @@ body {
   font-size: 1rem;
   font-family: ${({ theme }) => theme.fontFamily.primary};
   background-color: ${({ theme }) => theme.colors.bodyBg};
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme }) => theme.colors.neutral['200']};
+}
+
+ul {
+  list-style: none;
 }
 
 `;
 
-export default GlobaStyles;
+export default GlobalStyles;
