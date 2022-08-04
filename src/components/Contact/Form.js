@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import styled, { css } from 'styled-components';
 import { Button } from '../common';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-hot-toast';
 
 const fieldInputStyles = css`
   appearance: none;
   background-color: rgba(255, 255, 255, 0.07);
-  color: ${({ theme }) => theme.colors.neutral['400']};
+  color: ${({ theme }) => theme.colors.neutral['300']};
   font-size: 0.875rem;
   border: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0.25);
@@ -61,13 +63,52 @@ const Form = () => {
     message: '',
   });
 
+  const reset = () => setFieldValues({ name: '', email: '', message: '' });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useRef();
+
   const handleValuesOnChange = (e) => {
     const { name, value } = e.target;
     setFieldValues((prev) => ({ ...prev, [name]: value }));
   };
 
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.sendForm(
+        'service_88qfplh',
+        'contact_form',
+        form.current,
+        'dJ_xJni7DR4yMx3FK',
+      );
+    } finally {
+      setIsSubmitting(false);
+      reset();
+    }
+  };
+
   return (
-    <StyledForm onSubmit={(e) => e.preventDefault()}>
+    <StyledForm
+      ref={form}
+      onSubmit={(e) =>
+        toast.promise(
+          sendEmail(e),
+          {
+            loading: 'Sending Message',
+            success: 'Message Sent. Thanks for reaching out.',
+            error: 'There was an error sending message.',
+          },
+          {
+            duration: 5000,
+            position: 'bottom-center',
+          },
+        )
+      }
+    >
       <FormControl>
         <Label htmlFor='name'>Name</Label>
         <Input
@@ -98,7 +139,9 @@ const Form = () => {
           required
         ></Textarea>
       </FormControl>
-      <Button type='submit'>Send</Button>
+      <Button type='submit' disabled={isSubmitting}>
+        Send
+      </Button>
     </StyledForm>
   );
 };

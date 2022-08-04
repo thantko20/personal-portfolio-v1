@@ -14,4 +14,9 @@ export const Button = styled.button`
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary['300']};
   }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 `;

@@ -1,6 +1,7 @@
 import { forwardRef } from 'react';
 import styled from 'styled-components';
 import Section from '../common/Section';
+import profile from '../../assets/profile.jpg';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -19,6 +20,8 @@ const Paragraph = styled.p`
   flex: 1;
   max-width: 36.875em;
   padding: 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
 `;
 
 const StyledImage = styled.img`
@@ -36,18 +39,18 @@ const About = forwardRef((props, ref) => {
     <Section title='About Me' ref={ref}>
       <StyledContainer>
         <Paragraph>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum dolor
-          totam in eaque incidunt consequatur ipsam doloribus repellat illum?
-          Error quod fugit sit exercitationem aut quam porro officiis dicta
-          neque! Repellendus corrupti exercitationem repellat nobis deserunt
-          voluptas blanditiis et totam culpa quam. Officia, maxime praesentium
-          magnam alias nesciunt laudantium, provident minus, numquam iste sit
-          doloribus deleniti eos nihil consectetur. Voluptas!
+          I&apos;ve been always passionate about technology and creating things
+          using what I&apos;ve learnt. I started programming in mid 2021. At
+          first it was just a hobby. Them, I kept digging deeper and deeper
+          through the weeds of programming and I knew that it&apos;s my destiny
+          to make a career in programming. I&apos;m currently following{' '}
+          <strong>The Odin Project</strong> curriculum with the help of the
+          amazing community on their discord. My goal is to become a fullstack
+          developer in web development. I dropped out of medical school a few
+          months ago and as of today, I&apos;m pursuing a Diploma in Computing
+          from NCC Education from the UK.
         </Paragraph>
-        <StyledImage
-          src='https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-          alt='thant ko zaw'
-        />
+        <StyledImage src={profile} alt='thant ko zaw' />
       </StyledContainer>
     </Section>
   );

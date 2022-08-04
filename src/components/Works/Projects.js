@@ -136,10 +136,10 @@ const Project = (props) => {
         </TagsContainer>
         <ProjectDescription>{props.description}</ProjectDescription>
         <LinksContainer>
-          <Link href={props.repoURL}>
+          <Link href={props.repoURL} target='_blank'>
             View Repo {<AiFillGithub size={20} />}
           </Link>
-          <Link href={props.liveURL}>
+          <Link href={props.liveURL} target='_blank'>
             Live Preview {<GoLinkExternal size={20} />}
           </Link>
         </LinksContainer>

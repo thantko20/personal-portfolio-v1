@@ -1,47 +1,57 @@
 import { forwardRef } from 'react';
 import Section from '../common/Section';
 import ProjectsContainer from './Projects';
+import RedditClone from '../../assets/reddit_clone.png';
+import ShoppingCart from '../../assets/shopping_cart.png';
+import Portfolio from '../../assets/portfolio_ss.png';
+import Pomodoro from '../../assets/pomodoro.png';
+import Battleship from '../../assets/battleship.png';
 
 const projects = [
   {
     name: 'Reddit Clone',
-    imgURL:
-      'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    imgURL: RedditClone,
     description:
       'A mini version of Reddit created with React, Typescript, Firebase, tailwindcss and headlessUI. This includes most of the main features of Reddit.',
-    tags: ['React', 'Typescript'],
-    repoURL: '',
-    liveURL: '',
+    tags: ['React', 'Typescript', 'Tailwindcss', 'Firebase'],
+    repoURL: 'https://github.com/thantko20/reddit-clone',
+    liveURL: 'https://reddit-clone-marco.vercel.app/',
   },
   {
-    name: 'Reddit Clone',
-    imgURL:
-      'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    name: 'Shopping Cart',
+    imgURL: ShoppingCart,
     description:
-      'A mini version of Reddit created with React, Typescript, Firebase, tailwindcss and headlessUI. This includes most of the main features of Reddit.',
-    tags: ['React', 'Typescript'],
-    repoURL: '',
-    liveURL: '',
+      'A shopping cart project created to learn react router. Product details from the fakestore api. Made with React and tailwindcss.',
+    tags: ['React', 'Tailwindcss', 'API'],
+    repoURL: 'https://github.com/thantko20/shopping-cart',
+    liveURL: 'https://thantko20.github.io/shopping-cart/',
   },
   {
-    name: 'Reddit Clone',
-    imgURL:
-      'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    name: 'My Personal Portfolio',
+    imgURL: Portfolio,
     description:
-      'A mini version of Reddit created with React, Typescript, Firebase, tailwindcss and headlessUI. This includes most of the main features of Reddit.',
-    tags: ['React', 'Typescript'],
-    repoURL: '',
-    liveURL: '',
+      "The one you are currently visiting! It's my first time tinkering with framer motion. Made the design in Figma. Developed with React, Framer Motion, and Styled Components.",
+    tags: ['React', 'Styled Components', 'Framer Motion', 'Figma'],
+    repoURL: 'https://github.com/thantko20/personal-portfolio-v1',
+    liveURL: 'https://thant-ko-portfolio.vercel.app/',
   },
   {
-    name: 'Reddit Clone',
-    imgURL:
-      'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    name: 'Live Pomodoro Timer',
+    imgURL: Pomodoro,
     description:
-      'A mini version of Reddit created with React, Typescript, Firebase, tailwindcss and headlessUI. This includes most of the main features of Reddit.',
-    tags: ['React', 'Typescript'],
-    repoURL: '',
-    liveURL: '',
+      'A mini pomodoro timer created with React and ChakraUI. Made for myself to focus on my studies.',
+    tags: ['React', 'ChakraUI'],
+    repoURL: 'https://github.com/thantko20/mini-pomodoro-timer',
+    liveURL: 'https://thantko20.github.io/mini-pomodoro-timer/',
+  },
+  {
+    name: 'Battleship',
+    imgURL: Battleship,
+    description:
+      'A classic battleship game where the player plays against the computer. Created with vanilla javascript and tested with jest framework.',
+    tags: ['Javascript', 'Jest', 'Testing'],
+    repoURL: 'https://github.com/thantko20/battleship',
+    liveURL: 'https://thantko20.github.io/battleship/',
   },
 ];
 
