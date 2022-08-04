@@ -56,6 +56,10 @@ const StyledForm = styled.form`
   }
 `;
 
+const EMAILJS_SERVICEID = process.env.REACT_APP_EMAILJS_SERVICEID;
+const EMAILJS_TEMPLATEID = process.env.REACT_APP_EMAILJS_TEMPLATEID;
+const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
 const Form = () => {
   const [{ name, email, message }, setFieldValues] = useState({
     name: '',
@@ -80,10 +84,10 @@ const Form = () => {
 
     try {
       await emailjs.sendForm(
-        'service_88qfplh',
-        'contact_form',
+        EMAILJS_SERVICEID,
+        EMAILJS_TEMPLATEID,
         form.current,
-        'dJ_xJni7DR4yMx3FK',
+        EMAILJS_PUBLIC_KEY,
       );
     } finally {
       setIsSubmitting(false);
