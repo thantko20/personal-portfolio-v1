@@ -22,6 +22,16 @@ const Paragraph = styled.p`
   padding: 0;
   font-size: 1.125rem;
   line-height: 1.6;
+
+  > a {
+    color: white;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary['400']};
+    }
+  }
 `;
 
 const StyledImage = styled.img`
@@ -40,15 +50,21 @@ const About = forwardRef((props, ref) => {
       <StyledContainer>
         <Paragraph>
           I&apos;ve been always passionate about technology and creating things
-          using what I&apos;ve learnt. I started programming in mid 2021. At
-          first it was just a hobby. Them, I kept digging deeper and deeper
-          through the weeds of programming and I knew that it&apos;s my destiny
-          to make a career in programming. I&apos;m currently following{' '}
-          <strong>The Odin Project</strong> curriculum with the help of the
-          amazing community on their discord. My goal is to become a fullstack
-          developer in web development. I dropped out of medical school a few
-          months ago and as of today, I&apos;m pursuing a Diploma in Computing
-          from NCC Education from the UK.
+          using what I&apos;ve learnt. I started learning programming in mid
+          2021. At first it was just a hobby. Them, I kept digging deeper and
+          deeper through the weeds of programming and I knew that it&apos;s my
+          destiny to make a career in programming. I&apos;m currently following{' '}
+          <a
+            href='https://www.theodinproject.com/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            The Odin Project
+          </a>{' '}
+          curriculum with the help of the amazing community on their discord. My
+          goal is to become a fullstack developer in web development. I dropped
+          out of medical school a few months ago and as of today, I&apos;m
+          pursuing a Diploma in Computing from NCC Education from the UK.
         </Paragraph>
         <StyledImage src={profile} alt='thant ko zaw' />
       </StyledContainer>
