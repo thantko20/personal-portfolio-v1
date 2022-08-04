@@ -18,6 +18,7 @@ const TagsContainer = styled.div`
   flex-wrap: wrap;
   justify-content: start;
   gap: 0.5rem;
+  row-gap: 1.375rem;
 `;
 
 const ProjectImage = styled.div`
