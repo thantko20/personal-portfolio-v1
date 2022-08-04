@@ -51,7 +51,7 @@ const About = forwardRef((props, ref) => {
         <Paragraph>
           I&apos;ve been always passionate about technology and creating things
           using what I&apos;ve learnt. I started learning programming in mid
-          2021. At first it was just a hobby. Them, I kept digging deeper and
+          2021. At first it was just a hobby. Then, I kept digging deeper and
           deeper through the weeds of programming and I knew that it&apos;s my
           destiny to make a career in programming. I&apos;m currently following{' '}
           <a
