@@ -7,11 +7,14 @@ import Works from './components/Works/Works';
 import About from './components/About/About';
 import { useScroll } from './ScrollProvider';
 import BackToTopBtn from './components/common/BackToTopBtn';
+import Contact from './components/Contact/Contact';
 
 const App = () => {
-  const { heroRef, technologiesRef, worksRef, aboutRef } = useScroll();
+  const { topRef, heroRef, technologiesRef, worksRef, aboutRef, contactRef } =
+    useScroll();
   return (
     <>
+      <div ref={topRef} style={{ position: 'absolute', top: 0 }}></div>
       <Header />
       <main>
         <Hero ref={heroRef} />
@@ -21,6 +24,8 @@ const App = () => {
         <Works ref={worksRef} />
         <Divider />
         <About ref={aboutRef} />
+        <Divider />
+        <Contact ref={contactRef} />
       </main>
       <BackToTopBtn />
     </>

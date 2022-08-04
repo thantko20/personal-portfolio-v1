@@ -30,7 +30,7 @@ const StyledBackToTopBtn = styled.button`
 `;
 
 const BackToTopBtn = () => {
-  const { heroRef, scrollTo } = useScroll();
+  const { heroRef, scrollTo, topRef } = useScroll();
   const isInView = useInView(heroRef);
 
   return (
@@ -38,7 +38,7 @@ const BackToTopBtn = () => {
       {!isInView && (
         <StyledBackToTopBtn
           aria-label='scroll back to top'
-          onClick={() => scrollTo(heroRef)}
+          onClick={() => scrollTo(topRef)}
         >
           <IoIosArrowUp size={32} />
         </StyledBackToTopBtn>

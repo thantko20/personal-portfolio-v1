@@ -1,6 +1,7 @@
 import { createContext, useContext, useRef } from 'react';
 
 const ScrollProviderContext = createContext({
+  topRef: null,
   heroRef: null,
   technologiesRef: null,
   worksRef: null,
@@ -10,6 +11,7 @@ const ScrollProviderContext = createContext({
 });
 
 const ScrollProvider = ({ children }) => {
+  const topRef = useRef(null);
   const heroRef = useRef(null);
   const technologiesRef = useRef(null);
   const worksRef = useRef(null);
@@ -24,6 +26,7 @@ const ScrollProvider = ({ children }) => {
   return (
     <ScrollProviderContext.Provider
       value={{
+        topRef,
         heroRef,
         technologiesRef,
         worksRef,
