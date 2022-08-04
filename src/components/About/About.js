@@ -63,8 +63,8 @@ const About = forwardRef((props, ref) => {
           </a>{' '}
           curriculum with the help of the amazing community on their discord. My
           goal is to become a fullstack developer in web development. I dropped
-          out of medical school a few months ago and as of today, I&apos;m
-          pursuing a Diploma in Computing from NCC Education from the UK.
+          out of medical school in early 2022 and as of today, I&apos;m pursuing
+          a Diploma in Computing from NCC Education from the UK.
         </Paragraph>
         <StyledImage src={profile} alt='thant ko zaw' />
       </StyledContainer>
