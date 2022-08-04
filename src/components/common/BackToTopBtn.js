@@ -31,7 +31,7 @@ const StyledBackToTopBtn = styled.button`
 
 const BackToTopBtn = () => {
   const { heroRef, scrollTo, topRef } = useScroll();
-  const isInView = useInView(heroRef);
+  const isInView = useInView(heroRef, { amount: 0.9 });
 
   return (
     <>

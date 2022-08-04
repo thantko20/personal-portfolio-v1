@@ -18,6 +18,7 @@ const SectionBody = styled.div`
 
 const StyledSection = styled(Container)`
   padding-block: 2rem;
+  scroll-margin: 5.5rem;
 `;
 
 const sectionVariants = {

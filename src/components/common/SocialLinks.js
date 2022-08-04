@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { IconContext } from 'react-icons';
 import { FaDiscord, FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 const StyledSocialLinkIcon = styled.a`
   color: inherit;
@@ -38,6 +39,7 @@ const SocialLinks = () => {
         <SocialLinkIcon icon={<FaGithub />} url='/' />
         <SocialLinkIcon icon={<FaLinkedin />} url='/' />
         <SocialLinkIcon icon={<FaDiscord />} url='/' />
+        <SocialLinkIcon icon={<MdEmail />} url='/' />
       </IconContext.Provider>
     </StyledSocialLinks>
   );
