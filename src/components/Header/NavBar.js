@@ -1,15 +1,7 @@
-import { useRef } from 'react';
 import styled from 'styled-components';
 import { useScroll } from '../../ScrollProvider';
 import { Container } from '../common/Container';
 import HamburgerMenu from './HamburgerMenu';
-
-const Logo = styled.span`
-  font-size: 3rem;
-  color: ${({ theme }) => theme.colors.white};
-  font-weight: 700;
-  z-index: 100;
-`;
 
 const NavLink = styled.button`
   font-weight: 500;
@@ -42,11 +34,29 @@ const StyledNavBar = styled(Container)`
   }
 `;
 
+const Logo = () => {
+  return (
+    <svg
+      width='60'
+      height='34'
+      viewBox='0 0 60 34'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      style={{ zIndex: 100 }}
+    >
+      <path
+        d='M26.216 0.303999V6.88H17.288V34H9.08V6.88H0.152V0.303999H26.216ZM49.8714 34L38.5434 19.12V34H30.3354V0.303999H38.5434V15.088L49.7754 0.303999H59.4234L46.3674 16.816L59.9034 34H49.8714Z'
+        fill='white'
+      />
+    </svg>
+  );
+};
+
 const NavBar = () => {
   const { worksRef, aboutRef, contactRef, scrollTo } = useScroll();
   return (
     <StyledNavBar>
-      <Logo>TK</Logo>
+      <Logo />
       <HamburgerMenu />
       <NavLinksContainer>
         <li>
