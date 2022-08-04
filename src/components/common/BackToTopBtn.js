@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useScroll } from '../../ScrollProvider';
 
 const StyledBackToTopBtn = styled.button`
-  background-color: ${({ theme }) => theme.colors.primary['700']};
+  background-color: ${({ theme }) => theme.colors.primary['500']};
   color: ${({ theme }) => theme.colors.primary['100']};
   cursor: pointer;
   border: none;
@@ -15,10 +15,14 @@ const StyledBackToTopBtn = styled.button`
   place-content: center;
   position: fixed;
   bottom: 5%;
-  right: 50vw;
-  transform: translateX(50%);
+  left: 90%;
+  transform: translateX(-50%);
   z-index: 1000;
   transition: background-color 0.3s ease-in-out;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    left: calc(50vw + 33.5em);
+  }
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary['600']};
