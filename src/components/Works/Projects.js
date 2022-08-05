@@ -67,7 +67,7 @@ const LinksContainer = styled.div`
 `;
 
 const ProjectDetail = styled.div`
-  padding: 1.175rem;
+  padding: 1.375rem;
   flex: 2;
   display: flex;
   gap: 1rem;
@@ -77,10 +77,10 @@ const ProjectDetail = styled.div`
 const StyledProject = styled(motion.div)`
   width: 100%;
   min-height: 15rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
-  border-radius: 2rem;
+  border-radius: 1.25rem;
   overflow: hidden;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {

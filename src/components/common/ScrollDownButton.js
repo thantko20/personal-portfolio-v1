@@ -1,16 +1,32 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { useScroll } from '../../ScrollProvider';
 
+const frames = keyframes`
+  0% {
+    top: 15%
+  }
+  20% {
+    top: 65%
+  }
+  60% {
+    top: 15%;
+  }
+  100% {
+    top: 15%;
+  }
+`;
+
 const StyledScrollDownButton = styled.button`
-  position: absolute;
   cursor: pointer;
   background-color: transparent;
   border: 3px solid white;
   border-radius: 9999px;
   width: 1.5rem;
   height: 3rem;
+
+  position: absolute;
   left: 50%;
-  bottom: 10%;
+  bottom: 1rem;
   transform: translateX(-50%);
 
   &::before {
@@ -23,11 +39,7 @@ const StyledScrollDownButton = styled.button`
     right: 50%;
     top: 10%;
     transform: translateX(50%);
-    transition: top 0.7s ease-in-out;
-  }
-
-  &:hover::before {
-    top: 70%;
+    animation: ${frames} 3s ease-in-out infinite;
   }
 `;
 

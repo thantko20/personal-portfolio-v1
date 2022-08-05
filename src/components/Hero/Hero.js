@@ -7,7 +7,7 @@ import ScrollDownButton from '../common/ScrollDownButton';
 import { useScroll } from '../../ScrollProvider';
 
 const HeroTitle = styled.h1`
-  font-size: 2.5rem;
+  font-size: 2.45rem;
   font-weight: 700;
   color: ${({ theme }) => theme.colors.white};
   letter-spacing: -1px;

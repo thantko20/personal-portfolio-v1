@@ -13,8 +13,12 @@ const LogosContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
   justify-items: center;
-  grid-column-gap: 3rem;
-  grid-row-gap: 3rem;
+  grid-column-gap: 5rem;
+  grid-row-gap: 4rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    grid-column-gap: 7rem;
+  }
 
   > svg {
     color: ${({ theme }) => theme.colors.neutral['300']};
