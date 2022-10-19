@@ -13,8 +13,8 @@ const projects = [
     name: 'Bloggy',
     imgURL: Bloggy,
     description:
-      'A mini blog application created with MERN stack. The blog content can be also created and edited with Rich Text Editor. Used TipTap for RTE.',
-    tags: ['React', 'Express', 'MongoDB', 'Typescript', 'MERN'],
+      'A RESTful mini blog application created with MERN stack. The blog content can be also created and edited with Rich Text Editor. Used TipTap for RTE.',
+    tags: ['React', 'Express', 'MongoDB', 'Typescript', 'MERN', 'RESTApi'],
     repoURL: 'https://github.com/thantko20/blog-frontend',
     liveURL: 'https://bloggy-pink.vercel.app',
   },
