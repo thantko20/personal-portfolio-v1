@@ -5,6 +5,8 @@ import {
   SiTailwindcss,
   SiStyledcomponents,
   SiTypescript,
+  SiNodedotjs,
+  SiMongodb,
 } from 'react-icons/si';
 import styled from 'styled-components';
 import Section from '../common/Section';
@@ -44,6 +46,8 @@ const Technologies = forwardRef((props, ref) => {
         <SiFirebase title='Firebase' />
         <SiTailwindcss title='Tailwindcss' />
         <SiStyledcomponents title='Styled Components' />
+        <SiNodedotjs title='Nodejs' />
+        <SiMongodb title='MongoDB' />
       </LogosContainer>
     </Section>
   );
