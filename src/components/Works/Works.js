@@ -6,8 +6,18 @@ import ShoppingCart from '../../assets/shopping_cart.png';
 import Portfolio from '../../assets/portfolio_ss.png';
 import Pomodoro from '../../assets/pomodoro.png';
 import Battleship from '../../assets/battleship.png';
+import Bloggy from '../../assets/Bloggy_Home_Page.png';
 
 const projects = [
+  {
+    name: 'Bloggy',
+    imgURL: Bloggy,
+    description:
+      'A mini blog application created with MERN stack. The blog content can be also created and edited with Rich Text Editor. Used TipTap for RTE.',
+    tags: ['React', 'Express', 'MongoDB', 'Typescript', 'MERN'],
+    repoURL: 'https://github.com/thantko20/blog-frontend',
+    liveURL: 'https://bloggy-pink.vercel.app',
+  },
   {
     name: 'Reddit Clone',
     imgURL: RedditClone,
