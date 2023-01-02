@@ -41,7 +41,7 @@ const projects = [
     imgURL: '/portfolio_ss.png',
     description:
       "The one you are currently visiting! It's my first time tinkering with framer motion. Made the design in Figma. Developed with React, Framer Motion, and Styled Components.",
-    tags: ['React', 'Styled Components', 'Framer Motion', 'Figma'],
+    tags: ['React', 'NextJS', 'Styled Components', 'Framer Motion', 'Figma'],
     repoURL: 'https://github.com/thantko20/personal-portfolio-v1',
     liveURL: 'https://thant-ko-portfolio.vercel.app/',
   },

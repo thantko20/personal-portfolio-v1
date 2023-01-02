@@ -49,7 +49,7 @@ const Contact = forwardRef((props, ref) => {
       <StyledContact>
         <LeftSection>
           <Paragraph>
-            I’m currently looking for part-time or freelance jobs in frontend
+            I’m currently looking for full-time or freelance jobs in frontend
             development. Shoot me a message if you think I’m a good fit for your
             team or project!
           </Paragraph>

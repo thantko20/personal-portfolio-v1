@@ -149,7 +149,7 @@ const Hero = forwardRef((props, ref) => {
           </div>
         </HeroTitle>
         <HeroBodyText>
-          A frontend developer based in Myanmar who crafts scalable and
+          A fullstack developer based in Myanmar who crafts scalable and
           maintainable websites.
         </HeroBodyText>
       </HeroTextContainer>
