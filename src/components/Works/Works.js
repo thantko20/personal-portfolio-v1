@@ -1,12 +1,6 @@
 import { forwardRef } from 'react';
 import Section from '../common/Section';
 import ProjectsContainer from './Projects';
-import RedditClone from '../../assets/reddit_clone.png';
-import ShoppingCart from '../../assets/shopping_cart.png';
-import Portfolio from '../../assets/portfolio_ss.png';
-import Pomodoro from '../../assets/pomodoro.png';
-import Battleship from '../../assets/battleship.png';
-import Bloggy from '../../assets/Bloggy_Home_Page.png';
 
 const projects = [
   {

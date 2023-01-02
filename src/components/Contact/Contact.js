@@ -56,7 +56,7 @@ const Contact = forwardRef((props, ref) => {
           <Form />
         </LeftSection>
         <RightSection>
-          <h4>Or connect me via my socials!</h4>
+          <h3>Or connect me via my socials!</h3>
           <SocialLinks />
         </RightSection>
       </StyledContact>

@@ -1,7 +1,6 @@
 import { forwardRef } from 'react';
 import styled, { useTheme } from 'styled-components';
 import Section from '../common/Section';
-import profile from '../../assets/profile.jpg';
 import Image from 'next/image';
 
 const StyledContainer = styled.div`
