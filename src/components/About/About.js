@@ -1,7 +1,8 @@
 import { forwardRef } from 'react';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 import Section from '../common/Section';
 import profile from '../../assets/profile.jpg';
+import Image from 'next/image';
 
 const StyledContainer = styled.div`
   display: flex;
@@ -45,6 +46,7 @@ const StyledImage = styled.img`
 `;
 
 const About = forwardRef((props, ref) => {
+  const theme = useTheme();
   return (
     <Section title='About Me' ref={ref}>
       <StyledContainer>
@@ -66,7 +68,23 @@ const About = forwardRef((props, ref) => {
           out of medical school in early 2022 and as of today, I&apos;m pursuing
           a Diploma in Computing from NCC Education from the UK.
         </Paragraph>
-        <StyledImage src={profile} alt='thant ko zaw' />
+        {/* <StyledImage src={profile} alt='thant ko zaw' /> */}
+        <Image
+          src='/profile.jpg'
+          alt='thant ko zaw'
+          width={500}
+          height={500}
+          style={{
+            flex: 1,
+            width: '100%',
+            height: 'auto',
+            maxWidth: '16rem',
+            aspectRatio: 1,
+            objectFit: 'cover',
+            borderRadius: '2rem',
+            border: `2px solid ${theme.colors.primary[400]}`,
+          }}
+        />
       </StyledContainer>
     </Section>
   );

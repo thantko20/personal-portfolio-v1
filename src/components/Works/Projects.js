@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import styled, { css } from 'styled-components';
 import { AiFillGithub } from 'react-icons/ai';
 import { GoLinkExternal } from 'react-icons/go';
+import Image from 'next/image';
 
 const Tag = styled.span`
   background-color: rgba(255, 255, 255, 0.1);
@@ -22,14 +23,10 @@ const TagsContainer = styled.div`
 `;
 
 const ProjectImage = styled.div`
+  position: relative;
   flex: 1;
   width: 100%;
   aspect-ratio: 2/1;
-  background-image: url(${({ url }) => url});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  transition: background-size 0.3s ease-in-out;
 `;
 
 const ProjectTitle = styled.h3`
@@ -127,7 +124,16 @@ const Project = (props) => {
       whileInView='onscreen'
       orientation={props.orientation}
     >
-      <ProjectImage url={props.imgURL} />
+      <ProjectImage>
+        <Image
+          src={props.imgURL}
+          alt={props.name}
+          fill
+          style={{
+            objectFit: 'cover',
+          }}
+        />
+      </ProjectImage>
       <ProjectDetail>
         <ProjectTitle>{props.name}</ProjectTitle>
         <TagsContainer>

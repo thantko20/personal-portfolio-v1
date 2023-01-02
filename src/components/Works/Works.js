@@ -11,7 +11,7 @@ import Bloggy from '../../assets/Bloggy_Home_Page.png';
 const projects = [
   {
     name: 'Bloggy',
-    imgURL: Bloggy,
+    imgURL: '/Bloggy_Home_Page.png',
     description:
       'A RESTful mini blog application created with MERN stack. The blog content can be also created and edited with Rich Text Editor. Used TipTap for RTE.',
     tags: ['React', 'Express', 'MongoDB', 'Typescript', 'MERN', 'RESTApi'],
@@ -20,7 +20,7 @@ const projects = [
   },
   {
     name: 'Reddit Clone',
-    imgURL: RedditClone,
+    imgURL: '/reddit_clone.png',
     description:
       'A mini version of Reddit created with React, Typescript, Firebase, tailwindcss and headlessUI. This includes most of the main features of Reddit.',
     tags: ['React', 'Typescript', 'Tailwindcss', 'Firebase'],
@@ -29,7 +29,7 @@ const projects = [
   },
   {
     name: 'Shopping Cart',
-    imgURL: ShoppingCart,
+    imgURL: '/shopping_cart.png',
     description:
       'A shopping cart project created to learn react router. Product details from the fakestore api. Made with React and tailwindcss.',
     tags: ['React', 'Tailwindcss', 'API'],
@@ -38,7 +38,7 @@ const projects = [
   },
   {
     name: 'My Personal Portfolio',
-    imgURL: Portfolio,
+    imgURL: '/portfolio_ss.png',
     description:
       "The one you are currently visiting! It's my first time tinkering with framer motion. Made the design in Figma. Developed with React, Framer Motion, and Styled Components.",
     tags: ['React', 'Styled Components', 'Framer Motion', 'Figma'],
@@ -47,7 +47,7 @@ const projects = [
   },
   {
     name: 'Live Pomodoro Timer',
-    imgURL: Pomodoro,
+    imgURL: '/pomodoro.png',
     description:
       'A mini pomodoro timer created with React and ChakraUI. Made for myself to focus on my studies.',
     tags: ['React', 'ChakraUI'],
@@ -56,7 +56,7 @@ const projects = [
   },
   {
     name: 'Battleship',
-    imgURL: Battleship,
+    imgURL: '/battleship.png ',
     description:
       'A classic battleship game where the player plays against the computer. Created with vanilla javascript and tested with jest framework.',
     tags: ['Javascript', 'Jest', 'Testing'],
