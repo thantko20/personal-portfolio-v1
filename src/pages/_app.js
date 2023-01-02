@@ -12,7 +12,7 @@ export default function MyApp({ Component, pageProps }) {
           <meta name='theme-color' content='#000000' />
           <meta
             name='description'
-            content='A passionate fullstack developer whose priority is to overcome any bumps.'
+            content='A fullstack developer based in Myanmar who loves building web apps.'
           />
           <title>Thant Ko</title>
         </Head>
