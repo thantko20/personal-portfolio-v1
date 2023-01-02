@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import SocialLinks from '../common/SocialLinks';
 import { forwardRef } from 'react';
 import ScrollDownButton from '../common/ScrollDownButton';
-import { useScroll } from '../../ScrollProvider';
+import { useScroll } from '../ScrollProvider';
 
 const HeroTitle = styled.h1`
   font-size: 2.45rem;

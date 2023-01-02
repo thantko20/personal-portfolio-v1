@@ -1,6 +1,6 @@
 import styled, { css, useTheme } from 'styled-components';
 import { motion, useCycle } from 'framer-motion';
-import { useScroll } from '../../ScrollProvider';
+import { useScroll } from '../ScrollProvider';
 
 const StyledHamburgerMenuBtn = styled.button`
   background-color: transparent;

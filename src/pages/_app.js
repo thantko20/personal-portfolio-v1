@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { ThemeProvider } from 'styled-components';
 import theme, { GlobalStyles } from '../theme';
-import ScrollProvider from '../ScrollProvider';
+import ScrollProvider from '../components/ScrollProvider';
 
 export default function MyApp({ Component, pageProps }) {
   return (

@@ -1,7 +1,7 @@
 import { useInView } from 'framer-motion';
 import { IoIosArrowUp } from 'react-icons/io';
 import styled from 'styled-components';
-import { useScroll } from '../../ScrollProvider';
+import { useScroll } from '../ScrollProvider';
 
 const StyledBackToTopBtn = styled.button`
   background-color: ${({ theme }) => theme.colors.primary['500']};

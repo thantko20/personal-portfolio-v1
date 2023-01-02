@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { useScroll } from '../../ScrollProvider';
+import { useScroll } from '../ScrollProvider';
 
 const frames = keyframes`
   0% {

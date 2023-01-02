@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useScroll } from '../../ScrollProvider';
+import { useScroll } from '../ScrollProvider';
 import { Container } from '../common/Container';
 import HamburgerMenu from './HamburgerMenu';
 
