@@ -11,6 +11,7 @@ export default function MyApp({ Component, pageProps }) {
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <meta name='theme-color' content='#000000' />
           <meat name='title' content='Thant Ko Zaw - Fullstack Developer' />
+          <meta name='title' content='Thant Ko Zaw - Fullstack Developer' />
           <meta
             name='description'
             content='A fullstack developer based in Myanmar who loves building web apps.'
@@ -41,9 +42,9 @@ export default function MyApp({ Component, pageProps }) {
           />
           <meta
             property='twitter:image'
-            content='https://www.thantko.dev/_next/image?url=%2Fprofile.jpg&w=1080&q=75'
+            content='https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png'
           ></meta>
-          <title>Thant Ko Zaw - Fullstack Developer</title>
+          <title>Thant Ko</title>
         </Head>
         <GlobalStyles />
         <ScrollProvider>
