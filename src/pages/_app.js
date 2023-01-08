@@ -25,7 +25,7 @@ export default function MyApp({ Component, pageProps }) {
             property='og:description'
             content='A fullstack developer based in Myanmar who loves building web apps.'
           />
-          <meta property='og:image' content='/portfolio_ss.png' />
+          <meta property='og:image' content='https://thantko.dev/_next/image?url=%2Fportfolio_ss.png&w=3840&q=75' />
           <meta property='twitter:card' content='summary_large_image' />
           <meta property='twitter:url' content='https://www.thantko.dev' />
           <meta
@@ -36,7 +36,7 @@ export default function MyApp({ Component, pageProps }) {
             property='twitter:description'
             content='A fullstack developer based in Myanmar who loves building web apps.'
           />
-          <meta property='twitter:image' content='/portfolio_ss.png' />
+          <meta property='twitter:image' content='https://thantko.dev/_next/image?url=%2Fportfolio_ss.png&w=3840&q=75' />
           <title>Thant Ko Zaw - Fullstack Developer</title>
         </Head>
         <GlobalStyles />
