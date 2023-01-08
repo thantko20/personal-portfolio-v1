@@ -67,7 +67,6 @@ const About = forwardRef((props, ref) => {
           out of medical school in early 2022 and as of today, I&apos;m pursuing
           a Diploma in Computing from NCC Education from the UK.
         </Paragraph>
-        {/* <StyledImage src={profile} alt='thant ko zaw' /> */}
         <Image
           src='/profile.jpg'
           alt='thant ko zaw'

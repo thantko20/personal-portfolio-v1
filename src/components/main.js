@@ -8,12 +8,14 @@ import About from './About/About';
 import { useScroll } from './ScrollProvider';
 import BackToTopBtn from './common/BackToTopBtn';
 import Contact from './Contact/Contact';
+import ScrollIndicator from './common/scroll-indicator';
 
 const Main = () => {
   const { topRef, heroRef, technologiesRef, worksRef, aboutRef, contactRef } =
     useScroll();
   return (
     <>
+      {/* <ScrollIndicator /> */}
       <div ref={topRef} style={{ position: 'absolute', top: 0 }}></div>
       <Header />
       <main>

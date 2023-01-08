@@ -15,7 +15,7 @@ const StyledSocialLinkIcon = styled.a`
 const StyledSocialLinks = styled.ul`
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
     gap: 1rem;
